@@ -1,15 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Indian's Barber | Premium Barbershop in Milpitas, CA</title>
-  <meta name="description" content="Bay Area's finest barbershop. Expert haircuts, beard trims, and signature head massages. 4.9★ rated. Walk-ins welcome!" />
+  <meta name="description" content="Bay Area's finest barbershop. Expert haircuts, beard trims, and signature head massages. 4.9★ rated. Walk-ins welcome!">
   
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
-  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=Playfair+Display:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@4.3.0/fonts/remixicon.css" rel="stylesheet">
   
   <style>
     :root {
@@ -32,15 +32,18 @@
       --color-gray-800: #262626;
       --color-gray-900: #171717;
     }
+
     * {
       margin: 0;
       padding: 0;
       box-sizing: border-box;
     }
+
     html {
       scroll-behavior: smooth;
       overflow-x: hidden;
     }
+
     body {
       font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
       color: var(--color-gray-800);
@@ -48,10 +51,12 @@
       line-height: 1.7;
       overflow-x: hidden;
     }
+
     img {
       max-width: 100%;
       display: block;
     }
+
     .animated-bg {
       position: fixed;
       top: 0;
@@ -64,11 +69,13 @@
       animation: gradientShift 15s ease infinite;
       opacity: 0.02;
     }
+
     @keyframes gradientShift {
       0% { background-position: 0% 50%; }
       50% { background-position: 100% 50%; }
       100% { background-position: 0% 50%; }
     }
+
     .top-alert {
       background: var(--gradient-primary);
       color: var(--color-dark);
@@ -79,6 +86,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .top-alert::before {
       content: '';
       position: absolute;
@@ -89,31 +97,38 @@
       background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
       animation: shimmer 3s infinite;
     }
+
     @keyframes shimmer {
       0% { left: -100%; }
       100% { left: 100%; }
     }
+
     .top-alert i {
       margin-right: 8px;
       animation: pulse 2s infinite;
     }
+
     @keyframes pulse {
       0%, 100% { opacity: 1; }
       50% { opacity: 0.7; }
     }
+
     .header {
       position: sticky;
       top: 0;
       z-index: 1000;
       background: rgba(10, 10, 10, 0.98);
       backdrop-filter: blur(20px) saturate(180%);
+      -webkit-backdrop-filter: blur(20px) saturate(180%);
       border-bottom: 1px solid rgba(212, 165, 116, 0.2);
       box-shadow: 0 4px 30px rgba(0, 0, 0, 0.3);
       transition: all 0.3s ease;
     }
+
     .header.scrolled {
       box-shadow: 0 8px 40px rgba(0, 0, 0, 0.5);
     }
+
     .nav-container {
       max-width: 1400px;
       margin: 0 auto;
@@ -123,6 +138,7 @@
       justify-content: space-between;
       gap: 40px;
     }
+
     .logo {
       display: flex;
       align-items: center;
@@ -130,9 +146,11 @@
       text-decoration: none;
       transition: transform 0.3s ease;
     }
+
     .logo:hover {
       transform: translateY(-2px);
     }
+
     .logo-icon {
       width: 52px;
       height: 52px;
@@ -148,6 +166,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .logo-icon::before {
       content: '';
       position: absolute;
@@ -159,15 +178,18 @@
       transform: rotate(45deg);
       animation: logoShine 3s infinite;
     }
+
     @keyframes logoShine {
       0% { transform: translateX(-100%) rotate(45deg); }
       100% { transform: translateX(100%) rotate(45deg); }
     }
+
     .logo-text {
       display: flex;
       flex-direction: column;
       gap: 2px;
     }
+
     .logo-title {
       font-family: 'Playfair Display', serif;
       font-size: 24px;
@@ -175,6 +197,7 @@
       color: var(--color-gold);
       letter-spacing: 1px;
     }
+
     .logo-subtitle {
       font-size: 11px;
       color: var(--color-gray-400);
@@ -182,11 +205,13 @@
       text-transform: uppercase;
       letter-spacing: 2px;
     }
+
     .nav-links {
       display: flex;
       gap: 32px;
       align-items: center;
     }
+
     .nav-links a {
       text-decoration: none;
       color: var(--color-gray-300);
@@ -195,6 +220,7 @@
       position: relative;
       transition: color 0.3s ease;
     }
+
     .nav-links a::after {
       content: '';
       position: absolute;
@@ -206,17 +232,21 @@
       transition: width 0.3s ease;
       border-radius: 2px;
     }
+
     .nav-links a:hover {
       color: var(--color-gold);
     }
+
     .nav-links a:hover::after {
       width: 100%;
     }
+
     .header-actions {
       display: flex;
       gap: 12px;
       align-items: center;
     }
+
     .btn {
       padding: 12px 24px;
       border-radius: 12px;
@@ -231,32 +261,39 @@
       cursor: pointer;
       white-space: nowrap;
     }
+
     .btn-primary {
       background: var(--gradient-primary);
       color: var(--color-dark);
       box-shadow: 0 8px 24px rgba(212, 165, 116, 0.4);
     }
+
     .btn-primary:hover {
       transform: translateY(-2px);
       box-shadow: 0 12px 32px rgba(212, 165, 116, 0.6);
     }
+
     .btn-ghost {
       background: transparent;
       color: var(--color-gold);
       border: 2px solid rgba(212, 165, 116, 0.3);
     }
+
     .btn-ghost:hover {
       background: rgba(212, 165, 116, 0.1);
       border-color: var(--color-gold);
     }
+
     .btn-white {
       background: white;
       color: var(--color-dark);
     }
+
     .btn-white:hover {
       transform: translateY(-2px);
       box-shadow: 0 12px 32px rgba(255, 255, 255, 0.3);
     }
+
     .mobile-menu-btn {
       display: none;
       background: none;
@@ -265,6 +302,7 @@
       cursor: pointer;
       color: var(--color-gold);
     }
+
     .hero {
       position: relative;
       padding: 140px 40px 120px;
@@ -272,6 +310,7 @@
       background: var(--gradient-dark);
       color: white;
     }
+
     .hero::before {
       content: '';
       position: absolute;
@@ -279,11 +318,11 @@
       left: 0;
       right: 0;
       bottom: 0;
-      background: 
-        radial-gradient(circle at 20% 30%, rgba(212, 165, 116, 0.15), transparent 50%),
-        radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.15), transparent 50%);
+      background: radial-gradient(circle at 20% 30%, rgba(212, 165, 116, 0.15), transparent 50%),
+                  radial-gradient(circle at 80% 70%, rgba(184, 134, 11, 0.15), transparent 50%);
       z-index: 0;
     }
+
     .hero::after {
       content: '';
       position: absolute;
@@ -295,6 +334,7 @@
       opacity: 0.15;
       z-index: 0;
     }
+
     .hero-container {
       max-width: 1400px;
       margin: 0 auto;
@@ -305,6 +345,7 @@
       position: relative;
       z-index: 1;
     }
+
     .hero-content h1 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(48px, 7vw, 78px);
@@ -313,18 +354,21 @@
       margin-bottom: 24px;
       letter-spacing: -2px;
     }
+
     .hero-content h1 .gradient-text {
       background: var(--gradient-primary);
       -webkit-background-clip: text;
       -webkit-text-fill-color: transparent;
       background-clip: text;
     }
+
     .hero-description {
       font-size: 20px;
       color: var(--color-gray-300);
       margin-bottom: 32px;
       line-height: 1.8;
     }
+
     .hero-rating {
       display: flex;
       align-items: center;
@@ -335,27 +379,33 @@
       border-radius: 16px;
       border: 1px solid rgba(212, 165, 116, 0.2);
       backdrop-filter: blur(10px);
+      -webkit-backdrop-filter: blur(10px);
     }
+
     .rating-stars {
       font-size: 28px;
       color: var(--color-gold);
     }
+
     .rating-info h3 {
       font-size: 32px;
       font-weight: 800;
       color: var(--color-gold);
       margin-bottom: 4px;
     }
+
     .rating-info p {
       font-size: 14px;
       color: var(--color-gray-400);
     }
+
     .hero-actions {
       display: flex;
       gap: 16px;
       margin-bottom: 48px;
       flex-wrap: wrap;
     }
+
     .hero-stats {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -363,9 +413,11 @@
       padding-top: 32px;
       border-top: 1px solid rgba(212, 165, 116, 0.2);
     }
+
     .stat-item {
       text-align: center;
     }
+
     .stat-number {
       font-size: 32px;
       font-weight: 800;
@@ -376,6 +428,7 @@
       display: block;
       margin-bottom: 4px;
     }
+
     .stat-label {
       font-size: 13px;
       color: var(--color-gray-400);
@@ -383,32 +436,39 @@
       text-transform: uppercase;
       letter-spacing: 0.5px;
     }
+
     .hero-image {
       position: relative;
       animation: float 6s ease-in-out infinite;
     }
+
     @keyframes float {
       0%, 100% { transform: translateY(0px); }
       50% { transform: translateY(-20px); }
     }
+
     .hero-card {
       background: rgba(255, 255, 255, 0.05);
       backdrop-filter: blur(20px);
+      -webkit-backdrop-filter: blur(20px);
       border-radius: 24px;
       padding: 32px;
       border: 1px solid rgba(212, 165, 116, 0.3);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
     }
+
     .hero-card h3 {
       font-size: 24px;
       margin-bottom: 16px;
       color: white;
     }
+
     .hero-form {
       display: flex;
       flex-direction: column;
       gap: 12px;
     }
+
     .form-input {
       padding: 16px 20px;
       border: 2px solid rgba(212, 165, 116, 0.3);
@@ -420,42 +480,50 @@
       color: white;
       width: 100%;
     }
+
     .form-input::placeholder {
       color: var(--color-gray-400);
     }
+
     .form-input:focus {
       outline: none;
       border-color: var(--color-gold);
       background: rgba(255, 255, 255, 0.08);
       box-shadow: 0 0 0 4px rgba(212, 165, 116, 0.1);
     }
+
     .image-carousel-section {
       padding: 0;
       background: var(--color-dark);
       overflow: hidden;
     }
+
     .carousel-container {
       position: relative;
       width: 100%;
       height: 550px;
       overflow: hidden;
     }
+
     .carousel-track {
       display: flex;
       transition: transform 0.5s ease;
       height: 100%;
     }
+
     .carousel-slide {
       min-width: 100%;
       height: 100%;
       position: relative;
     }
+
     .carousel-slide img {
       width: 100%;
       height: 100%;
       object-fit: cover;
       filter: brightness(0.7);
     }
+
     .carousel-overlay {
       position: absolute;
       inset: 0;
@@ -465,6 +533,7 @@
       padding: 60px;
       color: white;
     }
+
     .carousel-content h3 {
       font-family: 'Playfair Display', serif;
       font-size: 42px;
@@ -472,10 +541,12 @@
       font-weight: 800;
       color: var(--color-gold);
     }
+
     .carousel-content p {
       font-size: 18px;
       opacity: 0.9;
     }
+
     .carousel-btn {
       position: absolute;
       top: 50%;
@@ -495,16 +566,20 @@
       color: var(--color-dark);
       box-shadow: 0 8px 24px rgba(212, 165, 116, 0.5);
     }
+
     .carousel-btn:hover {
       transform: translateY(-50%) scale(1.1);
       box-shadow: 0 12px 32px rgba(212, 165, 116, 0.7);
     }
+
     .carousel-btn-prev {
       left: 40px;
     }
+
     .carousel-btn-next {
       right: 40px;
     }
+
     .carousel-indicators {
       position: absolute;
       bottom: 30px;
@@ -514,6 +589,7 @@
       gap: 12px;
       z-index: 10;
     }
+
     .carousel-indicator {
       width: 12px;
       height: 12px;
@@ -523,31 +599,37 @@
       cursor: pointer;
       transition: all 0.3s ease;
     }
+
     .carousel-indicator.active {
       background: var(--color-gold);
       width: 32px;
       border-radius: 6px;
     }
+
     .trust-badges {
       padding: 80px 40px;
       background: var(--color-gray-50);
     }
+
     .container {
       max-width: 1400px;
       margin: 0 auto;
     }
+
     .badges-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
       gap: 40px;
       text-align: center;
     }
+
     .badge-item {
       display: flex;
       flex-direction: column;
       align-items: center;
       gap: 16px;
     }
+
     .badge-icon {
       width: 80px;
       height: 80px;
@@ -560,22 +642,27 @@
       color: var(--color-dark);
       box-shadow: 0 12px 40px rgba(212, 165, 116, 0.4);
     }
+
     .badge-item h3 {
       font-size: 18px;
       color: var(--color-dark);
     }
+
     .badge-item p {
       color: var(--color-gray-600);
       font-size: 14px;
     }
+
     .services {
       padding: 100px 40px;
       background: white;
     }
+
     .section-header {
       text-align: center;
       margin-bottom: 64px;
     }
+
     .section-label {
       display: inline-block;
       padding: 8px 20px;
@@ -588,6 +675,7 @@
       letter-spacing: 1px;
       margin-bottom: 16px;
     }
+
     .section-title {
       font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 5vw, 54px);
@@ -596,17 +684,20 @@
       color: var(--color-dark);
       letter-spacing: -1px;
     }
+
     .section-description {
       font-size: 18px;
       color: var(--color-gray-600);
       max-width: 700px;
       margin: 0 auto;
     }
+
     .services-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
       gap: 32px;
     }
+
     .service-card {
       background: white;
       border: 2px solid var(--color-gray-100);
@@ -616,6 +707,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .service-card::before {
       content: '';
       position: absolute;
@@ -628,18 +720,22 @@
       transition: opacity 0.4s ease;
       z-index: 0;
     }
+
     .service-card:hover::before {
       opacity: 0.05;
     }
+
     .service-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
       border-color: var(--color-gold);
     }
+
     .service-card > * {
       position: relative;
       z-index: 1;
     }
+
     .service-icon {
       width: 64px;
       height: 64px;
@@ -653,27 +749,32 @@
       color: var(--color-dark);
       box-shadow: 0 8px 24px rgba(212, 165, 116, 0.4);
     }
+
     .service-card h3 {
       font-size: 22px;
       margin-bottom: 12px;
       color: var(--color-dark);
       font-weight: 700;
     }
+
     .service-price {
       font-size: 28px;
       font-weight: 800;
       color: var(--color-gold-dark);
       margin-bottom: 12px;
     }
+
     .service-card p {
       color: var(--color-gray-600);
       margin-bottom: 20px;
       line-height: 1.7;
     }
+
     .service-card ul {
       list-style: none;
       padding: 0;
     }
+
     .service-card li {
       padding: 8px 0;
       color: var(--color-gray-600);
@@ -682,26 +783,76 @@
       gap: 8px;
       font-size: 15px;
     }
+
     .service-card li::before {
       content: '✓';
       color: var(--color-gold-dark);
       font-weight: 700;
     }
+
+    .deals-section {
+      margin-top: 60px;
+      text-align: center;
+      padding: 40px;
+      background: rgba(212, 165, 116, 0.1);
+      border-radius: 20px;
+    }
+
+    .deals-section h3 {
+      font-size: 28px;
+      margin-bottom: 20px;
+      color: var(--color-dark);
+    }
+
+    .deals-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 24px;
+      margin-top: 30px;
+    }
+
+    .deal-card {
+      background: white;
+      padding: 24px;
+      border-radius: 16px;
+      box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+    }
+
+    .deal-card h4 {
+      font-size: 20px;
+      margin-bottom: 12px;
+      color: var(--color-dark);
+    }
+
+    .deal-card .price {
+      font-size: 32px;
+      font-weight: 800;
+      color: var(--color-gold-dark);
+    }
+
+    .deal-card p {
+      color: var(--color-gray-600);
+      margin-top: 8px;
+    }
+
     .process {
       padding: 100px 40px;
       background: var(--gradient-dark);
       color: white;
     }
+
     .process-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
       gap: 40px;
       margin-top: 64px;
     }
+
     .process-step {
       text-align: center;
       position: relative;
     }
+
     .process-step::after {
       content: '→';
       position: absolute;
@@ -712,9 +863,11 @@
       opacity: 0.3;
       font-weight: 300;
     }
+
     .process-step:last-child::after {
       display: none;
     }
+
     .step-number {
       width: 80px;
       height: 80px;
@@ -729,24 +882,29 @@
       color: var(--color-dark);
       box-shadow: 0 12px 40px rgba(212, 165, 116, 0.5);
     }
+
     .process-step h3 {
       font-size: 20px;
       margin-bottom: 12px;
     }
+
     .process-step p {
       color: var(--color-gray-300);
       line-height: 1.7;
     }
+
     .testimonials {
       padding: 100px 40px;
       background: var(--color-gray-50);
     }
+
     .testimonials-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
       gap: 32px;
       margin-top: 64px;
     }
+
     .testimonial-card {
       background: white;
       border-radius: 20px;
@@ -754,16 +912,19 @@
       box-shadow: 0 12px 40px rgba(0, 0, 0, 0.08);
       transition: all 0.3s ease;
     }
+
     .testimonial-card:hover {
       transform: translateY(-8px);
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
     }
+
     .testimonial-header {
       display: flex;
       align-items: center;
       gap: 16px;
       margin-bottom: 20px;
     }
+
     .testimonial-avatar {
       width: 60px;
       height: 60px;
@@ -776,30 +937,36 @@
       font-weight: 700;
       color: var(--color-dark);
     }
+
     .testimonial-info h4 {
       font-size: 18px;
       margin-bottom: 4px;
       color: var(--color-dark);
     }
+
     .testimonial-stars {
       font-size: 16px;
       color: var(--color-gold);
     }
+
     .testimonial-text {
       color: var(--color-gray-600);
       line-height: 1.8;
       font-size: 16px;
     }
+
     .gallery {
       padding: 100px 40px;
       background: white;
     }
+
     .gallery-grid {
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 24px;
       margin-top: 48px;
     }
+
     .gallery-item {
       border-radius: 20px;
       overflow: hidden;
@@ -809,14 +976,17 @@
       transition: transform 0.3s ease;
       box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
     }
+
     .gallery-item:hover {
       transform: scale(1.05);
     }
+
     .gallery-item img {
       width: 100%;
       height: 100%;
       object-fit: cover;
     }
+
     .gallery-item::after {
       content: '';
       position: absolute;
@@ -825,9 +995,11 @@
       opacity: 0;
       transition: opacity 0.3s ease;
     }
+
     .gallery-item:hover::after {
       opacity: 1;
     }
+
     .cta {
       padding: 100px 40px;
       background: var(--gradient-primary);
@@ -836,6 +1008,7 @@
       position: relative;
       overflow: hidden;
     }
+
     .cta::before {
       content: '';
       position: absolute;
@@ -846,14 +1019,17 @@
       background: radial-gradient(circle, rgba(255,255,255,0.2) 0%, transparent 70%);
       animation: rotate 20s linear infinite;
     }
+
     @keyframes rotate {
       0% { transform: rotate(0deg); }
       100% { transform: rotate(360deg); }
     }
+
     .cta-content {
       position: relative;
       z-index: 1;
     }
+
     .cta h2 {
       font-family: 'Playfair Display', serif;
       font-size: clamp(36px, 5vw, 54px);
@@ -861,52 +1037,62 @@
       margin-bottom: 24px;
       letter-spacing: -1px;
     }
+
     .cta p {
       font-size: 20px;
       margin-bottom: 40px;
       opacity: 0.95;
     }
+
     .cta-actions {
       display: flex;
       gap: 16px;
       justify-content: center;
       flex-wrap: wrap;
     }
+
     .contact {
       padding: 100px 40px;
       background: var(--color-dark);
       color: white;
     }
+
     .contact-grid {
       display: grid;
       grid-template-columns: 1.2fr 1fr;
       gap: 60px;
       margin-top: 64px;
     }
+
     .contact-form {
       background: rgba(255, 255, 255, 0.05);
       padding: 48px;
       border-radius: 24px;
       border: 2px solid rgba(212, 165, 116, 0.2);
     }
+
     .form-group {
       margin-bottom: 24px;
     }
+
     .form-label {
       display: block;
       margin-bottom: 8px;
       font-weight: 600;
       color: white;
     }
+
     textarea.form-input {
       min-height: 120px;
       resize: vertical;
     }
+
     .contact-info {
       display: flex;
       flex-direction: column;
       gap: 32px;
     }
+
     .info-card {
       background: var(--gradient-primary);
       color: var(--color-dark);
@@ -914,6 +1100,7 @@
       border-radius: 20px;
       box-shadow: 0 20px 60px rgba(212, 165, 116, 0.3);
     }
+
     .info-card h3 {
       font-size: 24px;
       margin-bottom: 20px;
@@ -921,6 +1108,7 @@
       align-items: center;
       gap: 12px;
     }
+
     .info-card p {
       margin-bottom: 12px;
       display: flex;
@@ -928,31 +1116,24 @@
       gap: 12px;
       font-size: 16px;
     }
+
     .info-card a {
       color: var(--color-dark);
       text-decoration: none;
       transition: opacity 0.3s ease;
       font-weight: 600;
     }
+
     .info-card a:hover {
       opacity: 0.7;
     }
-    .map-container {
-      border-radius: 20px;
-      overflow: hidden;
-      height: 300px;
-      border: 2px solid rgba(212, 165, 116, 0.3);
-    }
-    .map-container iframe {
-      width: 100%;
-      height: 100%;
-      border: none;
-    }
+
     .footer {
       background: var(--color-dark-light);
       color: var(--color-gray-400);
       padding: 80px 40px 40px;
     }
+
     .footer-grid {
       max-width: 1400px;
       margin: 0 auto;
@@ -961,20 +1142,24 @@
       gap: 60px;
       margin-bottom: 60px;
     }
+
     .footer-brand h3 {
       font-family: 'Playfair Display', serif;
       color: var(--color-gold);
       font-size: 28px;
       margin-bottom: 16px;
     }
+
     .footer-brand p {
       line-height: 1.7;
       margin-bottom: 24px;
     }
+
     .social-links {
       display: flex;
       gap: 12px;
     }
+
     .social-link {
       width: 44px;
       height: 44px;
@@ -988,31 +1173,38 @@
       transition: all 0.3s ease;
       font-size: 18px;
     }
+
     .social-link:hover {
       background: var(--gradient-primary);
       color: var(--color-dark);
       transform: translateY(-2px);
     }
+
     .footer-col h4 {
       color: white;
       font-size: 16px;
       margin-bottom: 20px;
       font-weight: 600;
     }
+
     .footer-col ul {
       list-style: none;
     }
+
     .footer-col li {
       margin-bottom: 12px;
     }
+
     .footer-col a {
       color: var(--color-gray-400);
       text-decoration: none;
       transition: color 0.3s ease;
     }
+
     .footer-col a:hover {
       color: var(--color-gold);
     }
+
     .footer-bottom {
       max-width: 1400px;
       margin: 0 auto;
@@ -1021,36 +1213,46 @@
       text-align: center;
       font-size: 14px;
     }
+
     @media (max-width: 1024px) {
       .nav-links {
         display: none;
       }
+
       .mobile-menu-btn {
         display: block;
       }
+
       .hero-container {
         grid-template-columns: 1fr;
       }
+
       .contact-grid {
         grid-template-columns: 1fr;
       }
+
       .footer-grid {
         grid-template-columns: repeat(2, 1fr);
       }
+
       .process-step::after {
         display: none;
       }
     }
+
     @media (max-width: 768px) {
       .nav-container {
         padding: 16px 20px;
       }
+
       .hero {
         padding: 80px 20px 60px;
       }
+
       .hero-stats {
         grid-template-columns: 1fr;
       }
+
       .services,
       .process,
       .gallery,
@@ -1059,30 +1261,38 @@
       .testimonials {
         padding: 60px 20px;
       }
+
       .footer-grid {
         grid-template-columns: 1fr;
         gap: 40px;
       }
+
       .btn-ghost.hide-mobile {
         display: none;
       }
+
       .carousel-btn {
         width: 40px;
         height: 40px;
         font-size: 18px;
       }
+
       .carousel-btn-prev {
         left: 20px;
       }
+
       .carousel-btn-next {
         right: 20px;
       }
+
       .carousel-overlay {
         padding: 30px;
       }
+
       .carousel-content h3 {
         font-size: 28px;
       }
+
       .carousel-content p {
         font-size: 14px;
       }
@@ -1091,10 +1301,12 @@
 </head>
 <body>
   <div class="animated-bg"></div>
+
   <div class="top-alert">
     <i class="ri-scissors-cut-line"></i>
     <strong>Walk-Ins Welcome!</strong> Open Today: 9 AM – 7 PM | Call: (909) 910-9797
   </div>
+
   <header class="header" id="header">
     <nav class="nav-container">
       <a href="#" class="logo">
@@ -1126,6 +1338,7 @@
       </div>
     </nav>
   </header>
+
   <section class="hero">
     <div class="hero-container">
       <div class="hero-content">
@@ -1171,8 +1384,8 @@
         <div class="hero-card">
           <h3>✂️ Walk In Today</h3>
           <form class="hero-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
-            <input type="text" name="name" class="form-input" placeholder="Your Name" required />
-            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required />
+            <input type="text" name="name" class="form-input" placeholder="Your Name" required>
+            <input type="tel" name="phone" class="form-input" placeholder="Phone Number" required>
             <select name="service" class="form-input" required>
               <option value="">Select Service</option>
               <option value="haircut">Haircut</option>
@@ -1190,6 +1403,7 @@
       </div>
     </div>
   </section>
+
   <section class="image-carousel-section">
     <div class="carousel-container">
       <div class="carousel-track" id="mainCarousel">
@@ -1234,6 +1448,7 @@
       </div>
     </div>
   </section>
+
   <section class="trust-badges">
     <div class="container">
       <div class="badges-grid">
@@ -1268,6 +1483,7 @@
       </div>
     </div>
   </section>
+
   <section class="services" id="services">
     <div class="container">
       <div class="section-header">
@@ -1447,28 +1663,29 @@
           </ul>
         </div>
       </div>
-      <div style="margin-top: 60px; text-align: center; padding: 40px; background: rgba(212, 165, 116, 0.1); border-radius: 20px;">
-        <h3 style="font-size: 28px; margin-bottom: 20px; color: var(--color-dark);">💈 Barber Shop Deals</h3>
-        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px; margin-top: 30px;">
-          <div style="background: white; padding: 24px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
-            <h4 style="font-size: 20px; margin-bottom: 12px; color: var(--color-dark);">Regular Cut + Eyebrows</h4>
-            <p style="font-size: 32px; font-weight: 800; color: var(--color-gold-dark);">$26</p>
-            <p style="color: var(--color-gray-600); margin-top: 8px;">Save $4 with this combo!</p>
+      <div class="deals-section">
+        <h3>💈 Barber Shop Deals</h3>
+        <div class="deals-grid">
+          <div class="deal-card">
+            <h4>Regular Cut + Eyebrows</h4>
+            <p class="price">$26</p>
+            <p>Save $4 with this combo!</p>
           </div>
-          <div style="background: white; padding: 24px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
-            <h4 style="font-size: 20px; margin-bottom: 12px; color: var(--color-dark);">Regular Cut + Eyebrows + Beard</h4>
-            <p style="font-size: 32px; font-weight: 800; color: var(--color-gold-dark);">$46</p>
-            <p style="color: var(--color-gray-600); margin-top: 8px;">Complete grooming package!</p>
+          <div class="deal-card">
+            <h4>Regular Cut + Eyebrows + Beard</h4>
+            <p class="price">$46</p>
+            <p>Complete grooming package!</p>
           </div>
-          <div style="background: white; padding: 24px; border-radius: 16px; box-shadow: 0 8px 24px rgba(0,0,0,0.08);">
-            <h4 style="font-size: 20px; margin-bottom: 12px; color: var(--color-dark);">Monday Special</h4>
-            <p style="font-size: 32px; font-weight: 800; color: var(--color-gold-dark);">$30</p>
-            <p style="color: var(--color-gray-600); margin-top: 8px;">Discounted rates on Mondays!</p>
+          <div class="deal-card">
+            <h4>Monday Special</h4>
+            <p class="price">$30</p>
+            <p>Discounted rates on Mondays!</p>
           </div>
         </div>
       </div>
     </div>
   </section>
+
   <section class="process" id="process">
     <div class="container">
       <div class="section-header">
@@ -1502,6 +1719,7 @@
       </div>
     </div>
   </section>
+
   <section class="testimonials" id="testimonials">
     <div class="container">
       <div class="section-header">
@@ -1587,6 +1805,7 @@
       </div>
     </div>
   </section>
+
   <section class="gallery" id="gallery">
     <div class="container">
       <div class="section-header">
@@ -1618,6 +1837,7 @@
       </div>
     </div>
   </section>
+
   <section class="cta">
     <div class="cta-content">
       <h2>Ready for a Fresh Look?</h2>
@@ -1634,6 +1854,7 @@
       </div>
     </div>
   </section>
+
   <section class="contact" id="contact">
     <div class="container">
       <div class="section-header">
@@ -1648,15 +1869,15 @@
           <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
             <div class="form-group">
               <label class="form-label">Full Name *</label>
-              <input type="text" name="name" class="form-input" required />
+              <input type="text" name="name" class="form-input" required>
             </div>
             <div class="form-group">
               <label class="form-label">Phone Number *</label>
-              <input type="tel" name="phone" class="form-input" required />
+              <input type="tel" name="phone" class="form-input" required>
             </div>
             <div class="form-group">
               <label class="form-label">Email Address</label>
-              <input type="email" name="email" class="form-input" />
+              <input type="email" name="email" class="form-input">
             </div>
             <div class="form-group">
               <label class="form-label">Service Needed *</label>
@@ -1696,4 +1917,92 @@
               Contact Info
             </h3>
             <p><i class="ri-phone-fill"></i> Phone: <a href="tel:+19099109797">(909) 910-9797</a></p>
-            <p><i class="ri-star-fill">
+            <p><i class="ri-star-fill"></i> 4.9★ Rating on Google</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>INDIAN'S BARBER</h3>
+        <p>Bay Area's premier barbershop offering expert haircuts, beard trims, and our signature head massage since 2014.</p>
+        <div class="social-links">
+          <a href="#" class="social-link"><i class="ri-facebook-fill"></i></a>
+          <a href="#" class="social-link"><i class="ri-instagram-line"></i></a>
+          <a href="#" class="social-link"><i class="ri-google-fill"></i></a>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h4>Services</h4>
+        <ul>
+          <li><a href="#services">Haircuts</a></li>
+          <li><a href="#services">Beard Trims</a></li>
+          <li><a href="#services">Head Massage</a></li>
+          <li><a href="#services">Kids Cuts</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#services">Services</a></li>
+          <li><a href="#gallery">Gallery</a></li>
+          <li><a href="#testimonials">Reviews</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <ul>
+          <li><a href="tel:+19099109797">(909) 910-9797</a></li>
+          <li>82 N Main St Suite 110</li>
+          <li>Milpitas, CA 95035</li>
+          <li>Mon-Sun: 9AM-7PM</li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 Indian's Barber. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script>
+    let currentSlide = 0;
+    const slides = document.querySelectorAll('.carousel-slide');
+    const indicators = document.querySelectorAll('.carousel-indicator');
+    const track = document.getElementById('mainCarousel');
+
+    function moveCarousel(direction) {
+      currentSlide = (currentSlide + direction + slides.length) % slides.length;
+      updateCarousel();
+    }
+
+    function goToSlide(index) {
+      currentSlide = index;
+      updateCarousel();
+    }
+
+    function updateCarousel() {
+      track.style.transform = `translateX(-${currentSlide * 100}%)`;
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('active', index === currentSlide);
+      });
+    }
+
+    setInterval(() => {
+      moveCarousel(1);
+    }, 5000);
+
+    window.addEventListener('scroll', () => {
+      const header = document.getElementById('header');
+      if (window.scrollY > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
